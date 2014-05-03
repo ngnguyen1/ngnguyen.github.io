@@ -264,10 +264,11 @@ p.tags {
 }
   
 p.tags span.st_tag {
-    padding: 0px 0px 0px 20px;
+    padding: 0px 7px 0px 20px;
     margin: 0;
     background: url(../images/tags/tag_bg_l.png) no-repeat left center;
     display: inline-block;
+  float: left;
 }
 p.tags span.st_tag a {
     text-decoration: none;
@@ -279,4 +280,9 @@ p.tags span.st_tag a {
 }
 p.tags span.st_tag a:hover {
     color: #333;
+}
+
+p.tags strong {
+  padding-right: 5px;
+  float: left;
 }
