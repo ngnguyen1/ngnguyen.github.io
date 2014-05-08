@@ -4,20 +4,17 @@
 	-moz-transform:scale(0.6);
 	-o-transform:scale(0.6);
 	float:left;
-	margin-left:-50px;
-	margin-right:-50px;
-	margin-top:-10px;
 	-webkit-transition-duration: 0.5s;
 	-moz-transition-duration: 0.5s;
 	-o-transition-duration: 0.5s;
-	width: 200px;
-	height: 200px;
+	width: 300px;
+	height: 300px;
 	}
 .img img{
 		padding:10px;
 		border:1px solid #fff;
-		width: 200px;
-		height: 200px;
+		width: 300px;
+		height: 300px;
 }
 .img:hover{
 	-webkit-transform:scale(0.8);
