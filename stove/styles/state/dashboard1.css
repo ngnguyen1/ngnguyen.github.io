@@ -1,0 +1,313 @@
+.green {
+  background: #0aa699;
+}
+.blue {
+  background-color: #0090d9;
+}
+.purple {
+  background-color: #736086;
+}
+.red {
+  background-color: #f35958;
+}
+.dash-board .col-md-4 {
+  margin-bottom: 15px;
+}
+.tiles-body .controller {
+  position: relative;
+  display: inline-block;
+  float: right;
+}
+.tiles-body .controller a {
+  position: relative;
+  display: inline-block;
+  color: #3A5E61;
+  margin-right: 3px;
+  top: 0;
+  right: 0;
+}
+.tiles-body .controller a:hover {
+  color: #fff;
+}
+.tiles-body .controller a:nth-child(2) i {
+  font-size: 16px;
+}
+.tiles-body .controller a i {
+  font-size: 13px;
+}
+.tiles-body .tiles-title {
+  font-size: 10.5px;
+  font-family: 'Open Sans';
+  letter-spacing: 0.5px;
+  font-weight: 600;
+  color: #1b1e24;
+}
+.tiles-body .widget-stats {
+  padding-left: 0;
+  display: inline-block;
+}
+.tiles-body .widget-stats .wrapper {
+  margin: 5px 0 5px 0;
+  border-right: 1px solid rgba(0, 0, 0, 0.2);
+  margin-right: 7px;
+  padding-right: 7px;
+}
+.tiles-body .widget-stats .wrapper .item-title {
+  font-size: 12px;
+  color: #ffffff;
+}
+.tiles-body .widget-stats .wrapper .item-count {
+  font-size: 15px;
+  color: #ffffff;
+  display: block;
+  font-weight: bold;
+}
+.tiles-body .progress {
+  margin-bottom: 15px;
+  height: 4px;
+  background-color: rgba(0, 0, 0, 0.28);
+  border-radius: 0;
+  margin-top: 20px;
+}
+.tiles-body .progress .progress-bar {
+  border-radius: 0px;
+  background-color: #ffffff;
+  background-image: none;
+  -webkit-transition: all 1000ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  transition: all 1000ms cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  -webkit-transition-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  -moz-transition-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  -ms-transition-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  -o-transition-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+  transition-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+}
+.tiles-body .description {
+  font-size: 12px;
+  color: #ffffff;
+  display: table-cell;
+  vertical-align: middle;
+  -webkit-font-smoothing: antialiased;
+}
+.tiles-body .description .mini-description {
+  position: relative;
+  top: -5px;
+  color: #fff;
+}
+.tiles-body .description .mini-description .blend {
+  color: rgba(0, 0, 0, 0.42);
+}
+.dotted .controls {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  z-index: 20;
+  padding: 0 15px;
+  width: 100%;
+}
+.dotted .controls a {
+  background: #15aa9e;
+  display: inline-block;
+  float: left;
+  font-size: 11px;
+  line-height: 28px;
+  margin-bottom: 0px;
+  outline: none;
+  text-decoration: none;
+  color: #fff;
+  width: 20%;
+  text-align: center;
+  padding: 15px 0;
+}
+.dotted .controls a.active {
+  background: #118b81 !important;
+  color: #fff;
+}
+.dotted .controls a:hover {
+  background: #118b81 !important;
+  color: #fff;
+}
+.dotted .dotted-map {
+  height: 360px;
+  position: relative;
+  overflow: hidden;
+  cursor: move;
+}
+.dotted #img-content {
+  -webkit-transform: translate3d(-300px, 0, 0);
+  -moz-transform: translate3d(-300px, 0, 0);
+  -ms-transform: translate3d(-300px, 0, 0);
+  -o-transform: translate3d(-300px, 0, 0);
+  transform: translate3d(-300px, 0, 0);
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  z-index: 1;
+  position: absolute;
+  width: 1700px;
+  height: 898px;
+  top: 0;
+}
+.dotted #img-content img {
+  width: 1700px;
+  height: 898px;
+}
+#chartVector .dxm {
+  width: 100% !important;
+  height: 100% !important;
+}
+#chartVector .dxm .dxm-background {
+  stroke-width: 0;
+}
+.title-col {
+  padding: 10px 15px;
+  color: #767676;
+  background-color: #f6f6f6;
+  text-transform: uppercase;
+  font-size: 14px;
+  border-bottom: 1px solid #ddd;
+}
+.title-col.green {
+  background-color: #0aa699;
+  padding: 19px 18px 15px 24px;
+  overflow: hidden;
+  position: relative;
+}
+.title-col.green .controller {
+  position: absolute;
+  right: 20px;
+}
+.title-col.green .controller a {
+  color: #3A5E61;
+}
+.title-col.green h3 {
+  color: #fff;
+  font-weight: 300;
+  margin: 50px 20px 30px 0;
+  font-size: 23px;
+}
+.title-col.green h3 span {
+  font-weight: 600;
+}
+.title-col.green .overlayer span a {
+  border: 2px solid #ffffff;
+  background-color: transparent;
+  color: #ffffff;
+  padding: 2px 8px;
+  border-radius: 15px;
+  font-weight: bold;
+  font-size: 12px;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+  -webkit-transition: all 0.2s ease-in-out;
+}
+.title-col.green .overlayer span a:hover {
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #000;
+}
+.title-col h4 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+}
+.box {
+  border: 1px solid #ddd;
+  border-radius: 0;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
+  margin-bottom: 15px;
+  background: #fff;
+  overflow: hidden;
+}
+.label {
+  border-radius: 0;
+}
+.progress {
+  border-radius: 0;
+  margin-bottom: 0;
+}
+.content-col tr td {
+  line-height: 32px !important;
+}
+.content-col.green {
+  background: #fff;
+}
+.content-col.green .user-comment-wrapper {
+  display: block;
+  margin-bottom: 9px;
+  padding: 0 14px;
+}
+.content-col.green .user-comment-wrapper .profile-wrapper {
+  float: left;
+  border-radius: 100px 100px 100px 100px;
+  display: inline-block;
+  height: 35px;
+  overflow: hidden;
+  width: 35px;
+  margin: 6px 8px 0 0px;
+  -webkit-flex: 1;
+  -moz-flex: 1;
+  flex: 1;
+}
+.content-col.green .user-comment-wrapper .comment {
+  display: inline-block;
+  float: left;
+}
+.content-col.green .user-comment-wrapper .comment .user-name {
+  color: #1b1e24 ;
+  font-size: 15px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.content-col.green .user-comment-wrapper .comment .user-name .semi-bold {
+  font-weight: 600;
+}
+.content-col.green .user-comment-wrapper .comment .preview-wrapper {
+  display: block;
+  color: #71798a;
+  font-size: 12px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  min-width: 0;
+}
+.content-col.green .m-r-20 {
+  margin-right: 20px;
+}
+.content-col.green .m-r-20 span {
+  font-size: 12px;
+  color: #1b1e24;
+  font-weight: 600;
+}
+.content-col.green .p-r-20 {
+  padding-right: 20px;
+  padding-left: 15px;
+  padding-top: 10px;
+}
+.content-col.green .p-r-20 .action-bar {
+  display: block;
+  list-style: none;
+  margin: 0;
+  font-size: 12px;
+  padding: 0;
+}
+.content-col.green .p-r-20 .action-bar li {
+  display: inline;
+  float: left;
+  position: relative;
+  padding-right: 8px;
+  padding-left: 6px;
+  line-height: 20px;
+}
+.content-col.green .p-r-20 .action-bar li a {
+  color: #b6bfc5;
+  font-weight: 600;
+}
+.content-col.green .p-r-20 .action-bar li a i {
+  margin-right: 5px;
+}
+.content-col.green .p-r-20 .action-bar li .text-error {
+  color: #f35958 !important;
+}
