@@ -25,7 +25,9 @@ body{
 #container{
 	width:100%;
 	min-height:800px;
-	background-color:#000;
+	background: url('../images/background.jpg') no-repeat;
+	background-size: 100%;
+	background-position: 0 80px;
 }
 a{
 color: rgb(0, 114, 191); text-decoration: none;	
