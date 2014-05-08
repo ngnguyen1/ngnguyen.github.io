@@ -4,14 +4,13 @@ function setcountdown(theyear,themonth,theday){
 
 setcountdown(2014,10,25); 
 
-var occasion="DIED"; 
 var message_on_occasion="SADY"; 
 
 var countdownwidth='480px'; 
 var countdownheight='20px'; 
 var countdownbgcolor='lightblack'; 
-var opentags='<font face="Verdana">'; 
-var closetags='</font>'; 
+var opentags='<div class="clock">'; 
+var closetags='</div>'; 
 var montharray=new Array("Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec");
 var crosscount=''; 
 
@@ -73,7 +72,7 @@ function countdown(){
             document.countdownnsmain.document.countdownnssub.document.close();
         } 
         else if (document.all||document.getElementById) 
-            crosscount.innerHTML="Chi? co`n " +opentags+dday+ " ngày "+dhour+" giờ "+dmin+" phút "+dsec+" giây nữa là đến  "+occasion+closetags;
+            crosscount.innerHTML=opentags+dday+ " ngày "+dhour+" giờ "+dmin+" phút "+dsec +"giây"+closetags;
     } 
     setTimeout("countdown()",1000);
 } 
