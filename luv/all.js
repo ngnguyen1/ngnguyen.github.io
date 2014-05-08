@@ -73,7 +73,7 @@ function countdown(){
             document.countdownnsmain.document.countdownnssub.document.close();
         } 
         else if (document.all||document.getElementById) 
-            crosscount.innerHTML="Chi? co`n " +opentags+dday+ " nga`y "+dhour+" gio` "+dmin+" phu�t "+dsec+" gi�y nu~a la` d�n  "+occasion+closetags;
+            crosscount.innerHTML="Chi? co`n " +opentags+dday+ " ngày "+dhour+" giờ "+dmin+" phút "+dsec+" giây nữa là đến  "+occasion+closetags;
     } 
     setTimeout("countdown()",1000);
 } 
