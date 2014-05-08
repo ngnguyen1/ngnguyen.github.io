@@ -16,6 +16,8 @@
 .img img{
 		padding:10px;
 		border:1px solid #fff;
+		width: 200px;
+		height: 200px;
 }
 .img:hover{
 	-webkit-transform:scale(0.8);
