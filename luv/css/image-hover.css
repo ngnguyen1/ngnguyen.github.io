@@ -7,8 +7,6 @@
 	-webkit-transition-duration: 0.5s;
 	-moz-transition-duration: 0.5s;
 	-o-transition-duration: 0.5s;
-	width: 300px;
-	height: 300px;
 	}
 .img img{
 		padding:10px;
@@ -53,7 +51,7 @@
 }
 #img-3 #mask-2{
 	width:50%;
-	margin-left: 154px;
+	margin-left: 161px;
 }
 #img-3:hover #mask-1{
 	width:0%;
