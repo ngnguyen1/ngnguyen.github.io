@@ -9,7 +9,7 @@ var message_on_occasion="SADY";
 var countdownwidth='480px'; 
 var countdownheight='20px'; 
 var countdownbgcolor='lightblack'; 
-var opentags='<div class="clock" style="color: #00FF00; font-size: 40px;">'; 
+var opentags='<div class="clock">'; 
 var closetags='</div>'; 
 var montharray=new Array("Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec");
 var crosscount=''; 
@@ -23,9 +23,9 @@ function start_countdown(){
 } 
 
 if (document.all||document.getElementById) 
-    document.write('<span id="countdownie" style="width:'+countdownwidth+'; background-color:'+countdownbgcolor+'"></span>') 
+    document.write('<span id="countdownie" style="width:'+countdownwidth+'; background-color:'+countdownbgcolor+'"></span>');
 
-window.onload=start_countdown 
+window.onload=start_countdown;
 
 
 function countdown(){ 
