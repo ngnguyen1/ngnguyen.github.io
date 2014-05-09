@@ -22,7 +22,7 @@ body{
 @font-face
 {
     font-family: myFirstFont;
-    src: url("../digital.ttf");
+    src: url("digital.ttf");
 }
 
 .clock {
