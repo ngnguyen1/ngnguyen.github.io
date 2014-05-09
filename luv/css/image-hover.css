@@ -19,6 +19,16 @@ body{
 	width:980px;
 }
 
+@font-face
+{
+    font-family: myFirstFont;
+    src: url(digital.ttf);
+}
+
+.clock {
+    font-family: myFirstFont;
+}
+
 #container{
 	width:100%;
 	min-height:800px;
