@@ -25,19 +25,23 @@ body{
     src: url("digital.ttf");
 }
 
+
+span#countdownie {
+    overflow: hidden;
+    width: 100% !important;
+    display: block;
+    margin-top: 50px;
+}
+
 .clock {
     font-family: myFirstFont;
     color: #00ff00;
     font-size: 50px;
-    text-shadow: 0px 0px 0 #0F0, 2px 2px 0 #0F0, 3px 3px 0 #444, 4px 4px 0 #0F0, 3px 3px 0 #444;
+    text-shadow: 0px 0px 0 #0F0, 2px 2px 0 #0F0, 3px 3px 0 #444, 4px 4px 0 #0F0, 3px 3px 0 #fff;
+    height: 85px;
+    text-align: center;
 }
 
-.clock:hover {
-    /* CSS3 Transform Effect */
-  	-webkit-transform: scale(1.2);     /* Safari & Chrome */
-  	-moz-transform: scale(1.2);        /* Firefox */
-  	-o-transform: scale(1.2);          /* Opera */
-}
 
 #container{
 	width:100%;
@@ -45,6 +49,7 @@ body{
 	background: url('../images/background.jpg') no-repeat;
 	background-size: 100%;
 	background-position: 0 80px;
+    margin-top: -50px;
 }
 .img{
 	-webkit-transform:scale(0.6);
@@ -124,6 +129,15 @@ body{
 	-webkit-transform: rotateZ(750deg);
 	-moz-transform: rotateZ(750deg);
 	-o-transform: rotat(750deg);
+}
+
+
+div#warning {
+    text-shadow: 1px 1px 6px #000000;
+    color: #00FF1F !important;
+    font-weight: bold;
+    font-size: 19px;
+    font-family: monospace;
 }
 
 .clearfix{
