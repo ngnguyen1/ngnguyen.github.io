@@ -72,7 +72,7 @@ function countdown(){
             document.countdownnsmain.document.countdownnssub.document.close();
         } 
         else if (document.all||document.getElementById) 
-            crosscount.innerHTML=opentags+dday+ " ngày "+dhour+" giờ "+dmin+" phút "+dsec +"giây"+closetags;
+            crosscount.innerHTML=opentags+dday+ " : "+dhour+" : "+dmin+" : "+dsec +" : "+closetags;
     } 
     setTimeout("countdown()",1000);
 } 
