@@ -1,0 +1,205 @@
+/*#content::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+#content::-webkit-scrollbar-thumb {
+  background-color: rgba(50,50,50,0.25);
+  border: 2px solid transparent;
+  border-radius: 10px;
+  background-clip: padding-box;
+}
+#content::-webkit-scrollbar-track {
+  background-color: rgba(50,50,50,0.05);
+}*/
+/* Have to set height explicity on ui-view
+to prevent collapsing during animation*/
+.well[ui-view]{
+  height: 65px;
+}
+
+.ui-view-container {
+  position: relative;
+}
+[ui-view].ng-leave {
+  position: absolute;
+  left: 0;
+  right: 0;
+  @transition-time: 0s;
+  -webkit-transition:all @transition-time ease-in-out;
+  -moz-transition:all @transition-time ease-in-out;
+  -o-transition:all @transition-time ease-in-out;
+  transition:all @transition-time ease-in-out;
+}
+[ui-view].ng-enter {
+  position: absolute;
+  left: 0;
+  right: 0;
+  @transition-time: 0.3s;
+  -webkit-transition:all @transition-time ease-in-out;
+  -moz-transition:all @transition-time ease-in-out;
+  -o-transition:all @transition-time ease-in-out;
+  transition:all @transition-time ease-in-out;
+}
+
+[ui-view].ng-enter {
+  opacity: 0;
+  /*padding-left: 0px;*/
+  -webkit-transform:translate3d(0, 50px, 0);
+  -moz-transform:translate3d(0, 50px, 0);
+  transform:translate3d(0, 50px, 0);
+}
+
+[ui-view].ng-enter-active {
+  opacity: 1;
+  /*padding-left: 100px;*/
+  -webkit-transform:translate3d(0, 0, 0);
+  -moz-transform:translate3d(0, 0, 0);
+  transform:translate3d(0, 0, 0);
+
+}
+
+[ui-view].ng-leave {
+  opacity: 1;
+
+}
+
+[ui-view].ng-leave-active {
+  opacity: 0;
+
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 300;
+  src: local('Open Sans Light'), local('OpenSans-Light'), url(../fonts/DXI1ORHCpsQm3Vp6mXoaTXwUvq1pQaUIDqPgpae5ItU.woff) format('woff');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Open Sans'), local('OpenSans'), url(../fonts/59ZRklaO5bWGqF5A9baEET8E0i7KZn-EPnyo3HZu7kw.woff) format('woff');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 600;
+  src: local('Open Sans Semibold'), local('OpenSans-Semibold'), url(../fonts/MTP_ySUJH_bn48VBG8sNSnwUvq1pQaUIDqPgpae5ItU.woff) format('woff');
+}
+@font-face {
+  font-family: 'Open Sans';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Open Sans Bold'), local('OpenSans-Bold'), url(../fonts/k3k702ZOKiLJc3WVjuplzHwUvq1pQaUIDqPgpae5ItU.woff) format('woff');
+}
+body {
+  font-family: 'Open Sans';
+}
+a {
+  cursor: pointer;
+  text-decoration: none;
+}
+p {
+  margin: 0;
+}
+#header {
+  height: 70px;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+  background: #071f4b;
+  background: -moz-linear-gradient(top, #0c3569 0%, #071f4b 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#0c3569), color-stop(100%,#071f4b));
+  background: -webkit-linear-gradient(top, #0c3569 0%,#071f4b 100%);
+  background: -o-linear-gradient(top, #0c3569 0%,#071f4b 100%);
+  background: -ms-linear-gradient(top, #0c3569 0%,#071f4b 100%);
+  background: linear-gradient(to bottom, #0c3569 0%,#071f4b 100%);
+  -ms-filter: "progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#0c3569', endColorstr='#071f4b')";
+  nav {
+    border: none;
+    border-radius: 0;
+    margin: 0;
+    height: 70px;
+    background: transparent;
+    ul {
+      li {
+        a {
+          text-align: center;
+          color: #fff;
+          height: 70px;
+          padding: 10px 15px;
+          font-weight: 600;
+          font-size: 13px;
+          &:hover {
+            text-decoration: underline;
+          }
+          i {
+            font-size: 27px;
+          }
+        }
+      }
+    }
+  }
+}
+#banner {
+  background: url('../images/x2-banner-abstract.png') no-repeat center #0c3569;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.1);
+  .intro-text {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    p {
+      font: bold 36px Georgia,"Times New Roman",Times,serif;
+      color: #99CC00;
+      text-shadow: 0 1px 0 #ccc,0 2px 0 #000,0 3px 0 #000,0 3px 0 #000,0 3px 0 #000,0 6px 1px rgba(0,0,0,.1),0 0 5px rgba(0,0,0,.1),0 1px 3px rgba(0,0,0,.3),0 3px 5px rgba(0,0,0,.2),0 5px 10px rgba(0,0,0,.25),0 10px 10px rgba(0,0,0,.2),0 20px 20px rgba(0,0,0,.15);
+      text-transform: uppercase;
+      &:nth-child(2) {
+      color: #fff;
+      }
+      span {
+        font: bold 38px Verdana,Arial,Helvetica,sans-serif;
+      }
+      &:nth-child(3) {
+        font: bold 22px/1.5em Garamond,Georgia,"Times New Roman",Times,serif;
+        color: #99D6FA;
+        text-shadow: 0 1px 1px #000000;
+        text-transform: none;
+        padding-top: 20px;
+        padding-bottom: 20px;
+      }
+    }
+    button {
+      background: #65ab07;
+      display: block;
+      padding: 10px 25px;
+      border-radius: 4px;
+      text-align: center;
+      font: bold 22px Arial, Helvetica, sans-serif;
+      color: #fff;
+      border: solid 1px #81c020;
+      text-shadow: -1px 1px 0px #427b3f;
+      -webkit-border-radius: 4px;
+      -webkit-box-shadow: 0px 1px 2px 0px #b3b3b3;
+      box-shadow: 0px 1px 2px 0px #b3b3b3;
+      background: -moz-linear-gradient(top, #77bd11 0%, #60a604 100%);
+      background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#77bd11), color-stop(100%,#60a604));
+      background: -webkit-linear-gradient(top, #77bd11 0%,#60a604 100%);
+      background: -o-linear-gradient(top, #77bd11 0%,#60a604 100%);
+      background: -ms-linear-gradient(top, #77bd11 0%,#60a604 100%);
+      background: linear-gradient(to bottom, #77bd11 0%,#60a604 100%);
+      filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#77bd11', endColorstr='#60a604',GradientType=0 );
+      zoom: 1;
+      &:hover {
+        background: #65ab07;
+        text-decoration: underline;
+      }
+    }
+  }
+  .image-intro {
+    padding-bottom: 20px;
+    padding-top: 10px;
+  }
+}
+#content {
+  background: data-uri('image/jpeg;base64', '../images/bg1.jpg');
+}
+#footer {
+  height: 40px;
+}
