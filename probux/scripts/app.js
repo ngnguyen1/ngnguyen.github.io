@@ -30,7 +30,7 @@ angular
                 templateUrl: 'views/state/route2.html'
             })
             .state('main.login', {
-                url: "login",
+                url: "/login",
                 templateUrl: 'views/states/login.html'
             })
     });
