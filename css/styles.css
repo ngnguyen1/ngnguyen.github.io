@@ -7,6 +7,9 @@ body {
     background: #11171c; 
 }
 
+.home {
+    color: black;
+}
 /* Sidebar style*/
 
 .sidebar {
@@ -180,3 +183,4 @@ body {
 .navbar-default {
     background: #FFF !important;
 }
+
