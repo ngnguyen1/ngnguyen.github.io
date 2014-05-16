@@ -1,0 +1,66 @@
+.account-minilink{font:12px 'Trebuchet MS',Arial,sans-serif !important;}
+.account-biglink{font:bold 13px 'Trebuchet MS',Arial,sans-serif !important;}
+.menuleft-box-title{padding:11px 10px !important;-webkit-box-shadow:rgba(255,255,255,0.6) 0 1px 0 inset;box-shadow:rgba(255,255,255,0.6) 0 1px 0 inset;}
+
+.acc-spr{float:left;background:url(//probux.cachefly.net/images/acc-spr.png) no-repeat right center;width:48px;height:48px;display:block;}
+.spr1{background-position:0 0;}.spr2{background-position:0 -48px;}.spr3{background-position:0 -96px;}
+
+.acc-left{padding:0 5px 0 0;border-bottom:1px solid #eee;}
+.acc-right{padding:0 0 0 5px;border-bottom:1px solid #eee;}
+.acc-tr:hover{background:#F5F5F5;}
+
+.acc1{list-style-type:none;}
+.acc1 li a{
+border-color:#eee #ebebeb #ebebeb #eee;border-style:solid;border-width:1px;border-radius:3px;
+font:bold 13px/16px "Trebuchet MS",Arial,sans-serif;color:#336699;cursor:pointer;text-decoration:none;
+padding:62px 38px 15px;display:block;
+background:url(upg.png) no-repeat center 10px #F5F5F5;
+}
+.acc1 li a:hover{
+background-image:url(//probux.cachefly.net/images/accn-upg.png), url(//probux.cachefly.net/images/accn-ylw.png);
+background-position:center 10px,center -12px;
+border-color:#ebebeb #e2e2e2 #e2e2e2 #ebebeb;
+color:#336699;text-decoration:underline;
+}
+
+.acc2{list-style-type:none;}
+.acc2 li a{
+border-color:#eee #ebebeb #ebebeb #eee;border-style:solid;border-width:1px;border-radius:3px;
+font:bold 13px/16px "Trebuchet MS",Arial,sans-serif;color:#336699;cursor:pointer;text-decoration:none;
+padding:62px 15px 15px;display:block;
+background:url(//probux.cachefly.net/images/accn-refs.png) no-repeat center 10px #F5F5F5;
+}
+.acc2 li a:hover{
+background-image:url(//probux.cachefly.net/images/accn-refs.png), url(//probux.cachefly.net/images/accn-ylw.png);
+background-position:center 10px,center -12px;
+border-color:#ebebeb #e2e2e2 #e2e2e2 #ebebeb;
+color:#336699;text-decoration:underline;
+}
+
+.acc3{list-style-type:none;}
+.acc3 li a{
+border-color:#eee #ebebeb #ebebeb #eee;border-style:solid;border-width:1px;border-radius:3px;
+font:bold 13px/16px "Trebuchet MS",Arial,sans-serif;color:#336699;cursor:pointer;text-decoration:none;
+padding:62px 35px 15px;display:block;
+background:url(//probux.cachefly.net/images/accn-stats.png) no-repeat center 10px #F5F5F5;
+}
+.acc3 li a:hover{
+background-image:url(//probux.cachefly.net/images/accn-stats.png), url(//probux.cachefly.net/images/accn-ylw.png);
+background-position:center 10px,center -12px;
+border-color:#ebebeb #e2e2e2 #e2e2e2 #ebebeb;
+color:#336699;text-decoration:underline;
+}
+
+.acc4{list-style-type:none;}
+.acc4 li a{
+border-color:#eee #ebebeb #ebebeb #eee;border-style:solid;border-width:1px;border-radius:3px;
+font:bold 13px/16px "Trebuchet MS",Arial,sans-serif;color:#336699;cursor:pointer;text-decoration:none;
+padding:62px 35px 15px;display:block;
+background:url(//probux.cachefly.net/images/accn-cash.png) no-repeat center 10px #F5F5F5;
+}
+.acc4 li a:hover{
+background-image:url(//probux.cachefly.net/images/accn-cash.png), url(//probux.cachefly.net/images/accn-ylw.png);
+background-position:center 10px,center -12px;
+border-color:#ebebeb #e2e2e2 #e2e2e2 #ebebeb;
+color:#336699;text-decoration:underline;
+}
