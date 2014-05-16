@@ -152,7 +152,8 @@ body {
 .content {
     width: 100%;
     min-height: 100%;
-    background: white; }
+    background: #F7F7F7; 
+}
 @media screen and (min-width: 760px) {
     .content {
         float: left;
@@ -173,4 +174,5 @@ body {
 .navbar {
     margin-bottom: 0 !important;
     border: none !important;
+    border-radius: 0 !important;
 }
