@@ -162,3 +162,8 @@ body {
 
 @media screen and (min-width: 760px) {
 }
+
+
+.navbar {
+    margin-bottom: 0 !important;
+}
