@@ -4,11 +4,10 @@ title:  "How to Setup GitLab: A Self Hosted GitHub"
 date:   2014-05-16 13:02:38
 categories: Angular
 ---
-
-### Introduction
-
 Okay — GitLab isn’t really your own self-hosted GitHub. I don’t believe GitLab or GitHub share any relationship besides both being Git Management Software, but it’s the best way I find to describe in laymen terms what GitLab is. GitLab is awesome. It’s featured packed, and it does nearly everything that Github does. Best of all, you get unlimited private repos with it (or techincally as many as your server can handle).
 
+
+###Introduction
 I have some pretty good DevOps skills, but I’m not really a server guy. Until recently, I’ve never previously wanted to deal with the hassle of setting up my own Git server, and GitHub’s managed solution is really quite appealing. With GitHub, you have a reliable and easy solution that you never really have to worry about. It’s also very nicely integrated with a huge array of social features like forking and organizations amongst other collaboration tools. The only thing is it can get expensive real fast if you need more than a handful of private repositories.
 
 Digital Ocean has recently made it very simple and straight forward to setup Gitlab with minimal effort and fully supporting one-click restorable backups. They also even provide great resources and tutorials on it:
