@@ -176,3 +176,7 @@ body {
     border: none !important;
     border-radius: 0 !important;
 }
+
+.navbar-default {
+    background: #FFF !important;
+}
