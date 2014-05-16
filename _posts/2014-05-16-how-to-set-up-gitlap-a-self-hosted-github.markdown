@@ -1,4 +1,9 @@
-## How to Setup GitLab: A Self Hosted GitHub
+---
+layout: post
+title:  "How to Setup GitLab: A Self Hosted GitHub"
+date:   2014-05-16 13:02:38
+categories: Angular
+---
 
 ### Introduction
 

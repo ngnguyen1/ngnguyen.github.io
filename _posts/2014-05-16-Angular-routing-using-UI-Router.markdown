@@ -1,4 +1,9 @@
-## AngularJS Routing Using UI-Router
+---
+layout: post
+title:  "AngularJS Routing Using UI-Router"
+date:   2014-05-16 13:02:38
+categories: Angular
+---
 
 AngularJS provides a great way to make single page applications. When creating single page applications, routing will be very important. We want our navigation to feel like a normal site and still not have our site refresh. We’ve already gone through Angular routing using the normal ngRoute method.
 

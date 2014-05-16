@@ -1,3 +1,10 @@
-## Hello everyone, welcome to my first post in jekyll blog.
+---
+layout: post
+title:  "Post test jekyll"
+date:   2014-05-16 13:02:38
+categories: Angular
+---
+
+Hello everyone, welcome to my first post in jekyll blog.
 
 This is text will be display on the my first post. My blog will be comming soon.
