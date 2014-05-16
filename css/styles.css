@@ -139,3 +139,9 @@ body {
     -o-transition: color 0.4s ease;
     -ms-transition: color 0.4s ease;
     transition: color 0.4s ease; }
+
+.group:after {
+    content: "";
+    display: table;
+    clear: both;
+}
