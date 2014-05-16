@@ -9,12 +9,12 @@
 html, body { height: 100%; }
 
 body {
+  color: #f7f7f7;
   font-family: Helvetica, Arial, sans-serif;
-  font-size: 16px;
-  line-height: 1.5;
-  font-weight: 300;
-  background-color: #fdfdfd;
-}
+  font-size: 14px;
+/*  font-family: "Lato", sans-serif;*/
+  line-height: 1.4;
+  background: #11171c; }
 
 h1, h2, h3, h4, h5, h6 { font-size: 100%; font-weight: 400; }
 
