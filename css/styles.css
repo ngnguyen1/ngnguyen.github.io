@@ -217,6 +217,6 @@ body {
 }
     #tw-4 .tw-click           { opacity:0; padding:10px 10px 5px;}
     
-    #tw-4:hover               { width:200px; border-radius:5px; }
-    #tw-4:hover .tw-text      { opacity:0; }
-    #tw-4:hover .tw-click     { opacity:1; color: white; margin-top:5px; }
+    #tw-4:hover               { width:270px; border-radius:0; }
+    #tw-4:hover .tw-text      { opacity:0; color: white;}
+    #tw-4:hover .tw-click     { opacity:1; margin-top:5px;}
