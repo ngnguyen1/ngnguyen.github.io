@@ -199,8 +199,20 @@ body {
      transform:rotate(180deg); 
 }
 
-#tw-4 .tw-click           { opacity:0; padding:10px 10px 5px; margin:0 auto; margin-top:0px; }
+.tw-outside        		{ display:block; position:relative; }
+	.tw-text, .tw-click 	{ display:block;
+      
+        transition:0.3s ease all;
+    }
+
+#tw-4                     { background:#DD4C3B; height:50px; overflow:hidden; text-align:center; width:50px; border-radius:50%; transition:0.3s ease all;}
+#tw-4 .tw-text img         {
+    position: absolute;
+    right: 2px;
+    top: -4px;
+}
+    #tw-4 .tw-click           { opacity:0; padding:10px 10px 5px;}
     
-    #tw-4:hover               { border-radius:5px; }
+    #tw-4:hover               { width:200px; border-radius:5px; }
     #tw-4:hover .tw-text      { opacity:0; }
-    #tw-4:hover .tw-click     { opacity:1; margin-top:5px; }
+    #tw-4:hover .tw-click     { opacity:1; color: white; margin-top:5px; }
