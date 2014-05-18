@@ -64,7 +64,10 @@ body {
 .sidebar .my-info .social a.googleplus {
     background-position: -75px 0px; }
 .sidebar .my-info .social a.googleplus:hover {
-    background-position: -75px -25px; }
+    background-position: -75px -25px; 
+    -webkit-transform:rotate(180deg);
+    transform:rotate(180deg);
+}
 .sidebar .menus {
     text-align: center; }
 @media screen and (min-width: 760px) {
