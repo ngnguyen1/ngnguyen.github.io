@@ -217,6 +217,7 @@ body {
 #s_plus   { background:#DD4C3B; }
 
 #social-group a {
+    transition: all 0.5s ease-in-out;
     color:#FFF; 
     display:inline-block; 
     font-size:20px; 
@@ -225,4 +226,10 @@ body {
     width:50px; 
     -webkit-border-radius:50%;
     border-radius: 50%;
+}
+
+
+#social-group a:hover {
+     -webkit-transform:rotate(180deg);
+     transform:rotate(180deg); 
 }
