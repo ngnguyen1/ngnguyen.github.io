@@ -177,6 +177,10 @@ body {
     background: #FFF !important;
 }
 
+.navbar-brand {
+    padding: 15px !important;
+}
+
 
 #s_facebook { background:#43609C; }
 #s_twitter  { background:#1CC1F7; }
