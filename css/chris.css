@@ -1,27 +1,102 @@
+@import url("http://fonts.googleapis.com/css?family=Lato:300,400,700");
+
+* {
+    position: relative;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    box-sizing: border-box; 
+}
+
 body {
-  color: #f7f7f7;
   font-size: 14px;
   font-family: "Lato", sans-serif;
   line-height: 1.4;
-  background: #11171c; 
+}
+
+.group:after {
+  content: "";
+  display: table;
+  clear: both; 
+}
+
+.navbar {
+    border-radius: 0 !important;
+    border: 0 !important;
+}
+
+.navbar-default {
+    background-color: rgba(26, 31, 39, 1) !important;
 }
 
 .content {
   width: 100%;
+  height: 100%;
   min-height: 100%;
-  background: white; 
+  background: #f7f7f7; 
 }
+
+.myself-image {
+    border-radius: 50%;
+}
+
+.circle {
+    float: left;
+    margin: 35px 0px 20px -14px;
+    width: 20px;
+    height: 20px;
+    border: 4px solid #FFF;
+    border-radius: 50%;
+    box-shadow: 0px 2px 6px -3px rgba(68, 68, 68, 0.5);
+    background-color: #03BB7A;    
+}
+
 @media screen and (min-width: 760px) {
     .content {
         float: left;
-        width: 80%; } }
+        width: 80%; 
+    } 
+}
+
 .sidebar {
     width: 100%;
     height: 100%; }
 @media screen and (min-width: 760px) {
     .sidebar {
         float: left;
-        width: 20%; } }
+        width: 20%; 
+        background: #11171c;
+        color: #f7f7f7;
+    } 
+}
+
+ul.posts {
+    list-style: none;
+    border-left: 8px solid #fff;
+    padding: 1px 0;
+    margin-left: 145px;
+}
+ul.posts li .post-date {
+    background: none repeat scroll 0% 0% #03CC85;
+    float: left;
+    padding: 10px 15px 10px 10px;
+    margin-top: 25px;
+    margin-left: -128px;
+    font-size: 15px;
+    width: 120px;
+    text-align: center;
+    color: #FFF;
+}
+
+ul.posts li .data {
+    margin: 10px 0px 10px 20px;
+    border-left: 10px solid #03CC85;
+    padding: 18px 20px;
+    font-size: 16px;
+    box-shadow: 0px 3px 3px -3px #CCC;
+    border-radius: 3px;
+}
+
 .sidebar .my-info {
     text-align: center;
     padding: 30px 0;
@@ -144,4 +219,5 @@ body {
     -moz-transition: color 0.4s ease;
     -o-transition: color 0.4s ease;
     -ms-transition: color 0.4s ease;
-    transition: color 0.4s ease; }
+    transition: color 0.4s ease; 
+}
