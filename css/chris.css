@@ -1,3 +1,12 @@
+#main {
+	position: absolute;
+	left: 250px;
+	right: 0;
+	top: 0;
+	bottom: 0;
+	background: #fefefe;
+	overflow: hidden;
+}
 /* sidebar
  **************************************************/
 #nav-container {
