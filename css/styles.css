@@ -30,7 +30,7 @@ body {
 @media screen and (min-width: 760px) {
     .sidebar {
         float: left;
-        width: 20%; 
+        width: 100%; 
     } 
 }
 .sidebar .my-info {
@@ -168,7 +168,7 @@ body {
     } 
     .navbar-header {
         background: #22262E;
-        width: 20%;
+        width: 100%;
     }
 }
 
