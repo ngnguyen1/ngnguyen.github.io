@@ -9,12 +9,12 @@
 html, body { height: 100%; }
 
 body {
-  color: #f7f7f7;
   font-family: Helvetica, Arial, sans-serif;
-  font-size: 14px;
-/*  font-family: "Lato", sans-serif;*/
-  line-height: 1.4;
-  background: #11171c; }
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 300;
+  background-color: #fdfdfd;
+}
 
 h1, h2, h3, h4, h5, h6 { font-size: 100%; font-weight: 400; }
 
@@ -403,137 +403,3 @@ a:visited { color: #205caa; }
     margin: 0 0 15px; }
 
 }
-
-
-/* Sidebar style*/
-
-.sidebar {
-    width: 100%;
-    height: 100%; }
-@media screen and (min-width: 760px) {
-    .sidebar {
-        float: left;
-        width: 20%; } }
-.sidebar .my-info {
-    text-align: center;
-    padding: 30px 0;
-    border-bottom: 1px solid #5e5e5e; }
-.sidebar .my-info .portfolio-image {
-    border-radius: 50%;
-}
-.sidebar .my-info h1, .sidebar .my-info h2 {
-    font-weight: normal; }
-.sidebar .my-info h1 {
-    font-size: 120%; }
-.sidebar .my-info h2 {
-    font-size: 100%; }
-.sidebar .my-info .social {
-    width: 120px;
-    margin: 0 auto; }
-.sidebar .my-info .social a {
-    float: left;
-    width: 25px;
-    height: 25px;
-    margin: 0 2px;
-    background: url(../images/social-sprite.png) no-repeat;
-    text-indent: -9999px; }
-@media screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-device-pixel-ratio: 2) {
-    .sidebar .my-info .social a {
-        background: url(../images/social-sprite@2x.png) no-repeat;
-        background-size: 101px 51px; } }
-.sidebar .my-info .social a.dribble {
-    background-position: 0px 0px; }
-.sidebar .my-info .social a.dribble:hover {
-    background-position: 0px -25px; }
-.sidebar .my-info .social a.twitter {
-    background-position: -25px 0px; }
-.sidebar .my-info .social a.twitter:hover {
-    background-position: -25px -25px; }
-.sidebar .my-info .social a.facebook {
-    background-position: -50px 0px; }
-.sidebar .my-info .social a.facebook:hover {
-    background-position: -50px -25px; }
-.sidebar .my-info .social a.googleplus {
-    background-position: -75px 0px; }
-.sidebar .my-info .social a.googleplus:hover {
-    background-position: -75px -25px; }
-.sidebar .menus {
-    text-align: center; }
-@media screen and (min-width: 760px) {
-    .sidebar .menus {
-        padding: 20px 30px; } }
-.sidebar .menus h3 {
-    text-transform: uppercase;
-    font-size: 120%;
-    font-weight: normal;
-    padding-left: 25px;
-    cursor: pointer;
-    width: 20%;
-    margin: 20px 110px 10px; }
-@media screen and (min-width: 360px) {
-    .sidebar .menus h3 {
-        margin: 20px auto 20px; } }
-@media screen and (min-width: 760px) {
-    .sidebar .menus h3 {
-        margin: 20px 0 10px 0; } }
-.sidebar .menus h3:before {
-    content: "";
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    height: 18px;
-    display: block;
-    background: url(../images/nav-sprite.png) no-repeat; }
-@media screen and (-webkit-min-device-pixel-ratio: 2), screen and (min-device-pixel-ratio: 2) {
-    .sidebar .menus h3:before {
-        background: url(../images/nav-sprite@2x.png) no-repeat;
-        background-size: 49px 18px; } }
-.sidebar .menus h3.work {
-    color: #d35136; }
-.sidebar .menus h3.work:before {
-    width: 15px;
-    background-position: 0px 0px; }
-.sidebar .menus h3.about {
-    color: #27b599; }
-.sidebar .menus h3.about:before {
-    width: 17px;
-    background-position: -15px 0px; }
-.sidebar .menus h3.contact {
-    color: #088ecc; }
-.sidebar .menus h3.contact:before {
-    width: 17px;
-    background-position: -32px 0px; }
-.sidebar .menus ul {
-    list-style: none;
-    padding: 0;
-    display: none;
-    margin: 0 135px 10px;
-    text-align: left; }
-@media screen and (min-width: 760px) {
-    .sidebar .menus ul {
-        margin: 0 0 0 25px;
-        display: block;
-        width: auto; } }
-.sidebar .menus ul.open {
-    display: inline-block;
-    margin: 0 auto 10px 60px; }
-@media screen and (min-width: 760px) {
-    .sidebar .menus ul.open {
-        margin: 0 0 0 25px;
-        display: block;
-        width: auto; } }
-.sidebar .menus ul li a {
-    color: #5e5e5e;
-    text-decoration: none;
-    -webkit-transition: color 0.4s ease;
-    -moz-transition: color 0.4s ease;
-    -o-transition: color 0.4s ease;
-    -ms-transition: color 0.4s ease;
-    transition: color 0.4s ease; }
-.sidebar .menus ul li a:hover, .sidebar .menus ul li a.current-menu-item {
-    color: white;
-    -webkit-transition: color 0.4s ease;
-    -moz-transition: color 0.4s ease;
-    -o-transition: color 0.4s ease;
-    -ms-transition: color 0.4s ease;
-    transition: color 0.4s ease; }
