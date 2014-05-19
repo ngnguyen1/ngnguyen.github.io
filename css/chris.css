@@ -1,0 +1,146 @@
+/* sidebar
+ **************************************************/
+#nav-container {
+	position: relative;
+	padding-bottom: 75px;
+	bottom: 0;
+	height: 100%;
+}
+
+#profile {
+	text-align: center;
+	padding: 30px 10px;
+	position: relative;
+}
+
+#profile .portrate {
+	background-image: url(../img/jennifer-doe.jpg);
+	width: 125px;
+	margin: 0 auto;
+	height: 125px;
+	border-radius: 50%;
+
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	background-size: cover;
+}
+
+#profile .title h2 {
+	font-size: 28px;
+	font-weight: 300;
+	color: #fff;
+	margin: 20px 0 10px 0;
+}
+
+#profile .title h3 {
+	font-size: 18px;
+	font-weight: 300;
+	color: #aaa;
+	margin: 0px 0 10px 0;
+}
+
+ul#navigation {
+	padding: 0;
+	margin: 0;
+}
+
+ul#navigation li {
+	display: block;
+	float: none;
+	clear: both;
+	background: #303030;
+	border-top: 1px solid #373737;
+	border-bottom: 1px solid #2B2B2B;
+
+	-webkit-transition: background 0.5s;
+	-moz-transition: background 0.5s;
+	-o-transition: background 0.5s;
+	-ms-transition: background 0.5s;
+	transition: background 0.5s;
+}
+
+ul#navigation li a {
+	color: #ccc;
+	font-size: 14px;
+}
+
+ul#navigation li:hover,ul#navigation li:focus {
+	background: #363636;
+}
+
+ul#navigation li:hover a,ul#navigation li:focus a {
+	color: #f7f7f7;
+}
+
+ul#navigation .currentmenu {
+	font-weight: bold;
+}
+
+ul#navigation li.currentmenu a {
+	color: #fff;
+}
+
+/*ul#navigation li.external:hover .icon, ul#navigation li.currentmenu .icon{
+	color: #03cc85;
+}*/
+
+ul#navigation li.currentmenu {
+	background: #363636;
+	border-top: 1px solid #3d3d3d;
+	border-bottom: 1px solid #252525;
+}
+
+
+ul#navigation li .text {
+	padding-left: 5%;
+	margin-left: 50px;
+	line-height: 45px;
+
+	-webkit-box-shadow: -3px 0 5px -4px #000;
+	box-shadow: -3px 0 5px -4px #000;
+}
+
+ul#navigation li .icon {
+	float: left;
+	line-height: 45px;
+	width: 50px;
+	text-align: center;
+	font-size: 27px;
+}
+
+.social-icons {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	background: #202020;
+	border-top: 1px solid #1A1A1A;
+	width: 250px;
+	z-index: 2;
+	height: 45px;
+}
+
+.social-icons ul {
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+
+.social-icons li {
+	float: left;
+	width: 33%;
+	padding: 10px;
+	text-align: center;
+}
+
+.social-icons a {
+	color: #ccc;
+}
+
+.social-icons a:hover,.social-icons a:focus {
+	color: #fff;
+}
+
+.social-icons i {
+	font-size: 16px;
+}
