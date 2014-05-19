@@ -20,6 +20,41 @@ body {
   clear: both; 
 }
 
+.social-icon {
+    background: none repeat scroll 0% 0% #1A1F27;
+    width: 100%;
+}
+
+.social-icon ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.social-icon li {
+    float: left;
+    width: 33%;
+    padding: 15px;
+    text-align: center;
+}
+
+.social-icon li:hover {
+    background: #03CC85;
+}
+
+.social-icon li a {
+    color: #f7f7f7;
+}
+
+.social-icon li a:hover {
+    text-decoration: none;
+    color: black;
+}
+.social-icon li:nth-child(2) {
+    border-left: 1px solid #11171C;
+    border-right: 1px solid #11171C;
+}
+
 .navbar {
     border-radius: 0 !important;
     border: 0 !important;
