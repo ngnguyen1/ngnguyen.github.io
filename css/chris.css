@@ -5,6 +5,10 @@ html {
     height: 100%;
 }
 
+h1, h2, h3 {
+    margin-top: 10px;
+}
+
 body {
   font-size: 14px;
   font-family: "Lato", sans-serif;
@@ -123,7 +127,6 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    overflow-y: scroll;
 }
 
 .sidebar::-webkit-scrollbar {
@@ -177,13 +180,15 @@ ul.posts li .data {
 
 .sidebar .my-info {
     text-align: center;
-    padding: 30px 0;
+    padding: 10px 0;
     border-bottom: 1px solid #5e5e5e; }
 .sidebar .my-info .portfolio-image {
     border-radius: 50%; 
 }
 .sidebar .my-info h1, .sidebar .my-info h2 {
-    font-weight: normal; }
+    font-weight: normal; 
+    line-height: 20px;
+}
 .sidebar .my-info h1 {
     font-size: 120%; }
 .sidebar .my-info h2 {
