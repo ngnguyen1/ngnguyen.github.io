@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "AngularJS Routing Using UI-Router"
-date:   2014-05-16 13:02:38
+title:  "Testing with new post"
+date:   2014-09-20 13:02:38
 categories: Angular
 ---
 
