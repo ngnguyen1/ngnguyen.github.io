@@ -1,0 +1,12 @@
+# Site settings
+
+
+# Site Settings
+title: 'Scotch Jekyll Bootstrap'
+description: 'An Open-Source Bootstrap 3 Jekyll Theme by Scotch'
+url: 'http://localhost:4000' # the base hostname & protocol for your site
+footer_text: '© Copyright 2016 Nguyễn Duy Ngà'
+
+# Admin Settings
+admin_name: 'Nga Nguyen Duy'
+admin_email: 'kyo1508@gmail.com'
