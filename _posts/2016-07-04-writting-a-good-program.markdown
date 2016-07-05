@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "How to writing a good program"
+title:  "How to writing a good programs"
 date:   2016-07-04 18:00:36 +0700
 categories: en
 tags: functional programming
@@ -35,3 +35,10 @@ they have fully understood what they are doing. Even if the program then
 works, the programmer is not quiet sure what is going on, and debugging the
 program becomes very difficult. Aim to be clear initially and forget about 
 being clear until later. Often clear programs tend to be efficient anyway.
+
+- Get used to throwing away code
+
+Declarative programmers talk about throwaway designs - programs that are
+written in order to help the understanding, but which are thrown away and
+replaced by something better once that understanding has been achieved. Don't
+be afraid to throw things away instead of patching them up.
