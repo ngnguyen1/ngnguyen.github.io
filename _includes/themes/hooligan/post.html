@@ -16,17 +16,17 @@
         <div class="section-nav">
             <div class="left align-right">
                 {% if page.previous %}
-                <a class="btn prev" href="{{ BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}">Prev</a>
+                <a class="prev" href="{{ BASE_PATH }}{{ page.previous.url }}" title="{{ page.previous.title }}">Prev</a>
                 {% else %}
-                <a class="btn disabled prev">Prev</a>
+                <a class="disabled prev">Prev</a>
                 {% endif %}
             </div>
             <!-- <a class="btn" href="{{ BASE_PATH }}{{ site.JB.archive_path }}">Archive</a> -->
             <div class="right align-left">
                 {% if page.next %}
-                <a class="btn next" href="{{ BASE_PATH }}{{ page.next.url }}" title="{{ page.next.title }}">Next</a>
+                <a class="next" href="{{ BASE_PATH }}{{ page.next.url }}" title="{{ page.next.title }}">Next</a>
                 {% else %}
-                <a class="btn next disabled">Next</a>
+                <a class="next disabled">Next</a>
                 {% endif %}
             </div>
         </div>
