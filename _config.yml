@@ -2,14 +2,20 @@
 # For more see: http://jekyllrb.com/docs/permalinks/
 permalink: /:categories/:year/:month/:day/:title 
 
-exclude: [".rvmrc", ".rbenv-version", "README.md", "Rakefile", "changelog.md"]
-highlighter: pygments
+exclude: [".rvmrc",
+".rbenv-version",
+"README.md",
+"Rakefile",
+"changelog.md"]
+
+# Github is not supported pygments for currently.
+# highlighter: pygments
 
 # Themes are encouraged to use these universal variables 
 # so be sure to set them if your theme uses them.
 #
 title : iControl
-tagline: Site Tagline
+tagline: We are developer, We have no life
 author :
   name : Nga Nguyen Duy
   email : kyo1508@gmail.com
