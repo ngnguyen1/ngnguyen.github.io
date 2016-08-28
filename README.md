@@ -6,6 +6,14 @@ This repository is a customized version of
 - Blockquote are indicated by classname: `.note_quote`, `warn_quote`. It looks
   like this:
   
+  ![block customize][blockquote_custom]
   
+- And (To Do)
 
+# License
+
+Copyright (C) 2016 by Nga Nguyen Duy (@tspyimt)
+
+
+[blockquote_custom]: https://goo.gl/yAubNR
 
