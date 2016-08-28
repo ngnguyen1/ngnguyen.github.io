@@ -9,7 +9,25 @@ exclude: [".rvmrc",
 "changelog.md"]
 
 # Github is not supported pygments for currently.
-# highlighter: pygments
+highlighter: pygments
+markdown: kramdown
+
+kramdown:
+  input: GFM
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  use_coderay: false
+  hard_wrap: false
+  coderay:
+    coderay_wrap: div
+    coderay_line_numbers: table
+    coderay_line_numbers_start: 1
+    coderay_tab_width: 4
+    coderay_bold_every: 10
+    coderay_css: style
 
 # Themes are encouraged to use these universal variables 
 # so be sure to set them if your theme uses them.
@@ -110,9 +128,9 @@ JB :
   analytics :
     provider : google
     gauges :
-        site_id : 'SITE ID'
+        site_id : '57c26ef4c88d90363f024a7e'
     google : 
-        tracking_id : 'UA-123-12'
+        tracking_id : 'UA-53075773-3'
     # getclicky :
     #   site_id : 
     # mixpanel :

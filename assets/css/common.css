@@ -15,3 +15,6 @@
 .right{float:right}
 .align-right{text-align:right}
 .align-left{text-align:left}
+.note_quote{border-left-color:#08c !important;background-color:lightblue;padding:0 0 0 15px;border-left:5px solid #eee;}
+.warn_quote{border-left-color:#f89406 !important;background-color:#fbb450;padding:0 0 0 15px;border-left:5px solid #eee;}
+blockquote p{font-size:13px;font-weight:400;color:black;padding-top:15px}
