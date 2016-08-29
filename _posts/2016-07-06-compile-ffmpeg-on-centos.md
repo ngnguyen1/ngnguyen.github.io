@@ -4,7 +4,7 @@ title: "Compile FFmpeg on Centos"
 description: ""
 category: 
 tags: [centos,ffmpeg]
-last_updated: Wed, 06 Jul 2016 09:36:08 +0700
+last_updated: Wed, 28 Aug 2016 16:36:08 +0700
 ---
 {% include JB/setup %}
 
@@ -17,185 +17,165 @@ and undoing all steps is simple and is shown at the end of this page.
 
 ## Get the dependencies
 
-`Note: The # indicates that the command should be executed as superuser or
-root.`
+> The ❯ sign indicates that the command should be executed as superuser or
+> root, $ sign for normal user.
+{: .note_quote }
 
 These are required compiling, but you can remove them when you are done if you
 prefer (except `make`, it should be installed by default and many things depend
 on it).
 
-```
-# yum install autoconf automake cmake freetype-devel gcc gcc-c++ git libtool \
-make mercurial nasm pkgconfig zlib-devel
-```
+{% highlight bash %}
+❯ yum install autoconf automake cmake freetype-devel gcc gcc-c++ git libtool make mercurial nasm pkgconfig zlib-devel
+{% endhighlight %}
 
-In your home directory, make a new directory to put all of the source code into:
 
-`$ mkdir ~/ffmpeg_sources`
+In your home directory, make a new directory to put all of the source code
+into: `$ mkdir ~/ffmpeg_sources`
 
 ## Compilation and Installation
 
-- Yasm:
+- **Yasm**: Yasm is an assembler used by x264 and FFmpeg.
 
-Yasm is an assembler used by x264 and FFmpeg.
+{% highlight bash %}
+$ cd ~/ffmpeg_sources
+$ git clone --depth 1 git://github.com/yasm/yasm.git
+$ cd yasm
+$ autoreconf -fiv
+$ ./configure --prefix="$HOME/ffmpeg_build" --bindir="$HOME/bin"
+$ make && make install
+$ make distclean
+{% endhighlight %}
 
-```
-cd ~/ffmpeg_sources
-git clone --depth 1 git://github.com/yasm/yasm.git
-cd yasm
-autoreconf -fiv
-./configure --prefix="$HOME/ffmpeg_build" --bindir="$HOME/bin"
-make && make install
-make distclean
-```
+- **libx264:** H.264 video encoder. See
+[H.264 Encoding Guide](https://goo.gl/Y44My4) for more information and usage
+samples.
 
-- libx264
+Requires `ffmpeg` to be configured with `--enable-gpl` and `--enable-libx264`
 
-H.264 video encoder. See
-[H.264 Encoding Guide](https://trac.ffmpeg.org/wiki/Encode/H.264) for more
-information and usage samples.
+{% highlight bash %}
+$ cd ~/ffmpeg_sources
+$ git clone --depth 1 git://git.videolan.org/x264
+$ cd x264
+$ PKG_CONFIG_PATH="$HOME/ffmpeg_build/lib/pkgconfig" ./configure --prefix="$HOME/ffmpeg_build" --bindir="$HOME/bin" --enable-static
+$ make && make install
+$ make distclean
+{% endhighlight %}
 
-Requires `ffmpeg` to be configured with `--enable-gpl` `--enable-libx264`
-
-```
-cd ~/ffmpeg_sources
-git clone --depth 1 git://git.videolan.org/x264
-cd x264
-PKG_CONFIG_PATH="$HOME/ffmpeg_build/lib/pkgconfig" ./configure --prefix="$HOME/ffmpeg_build" --bindir="$HOME/bin" --enable-static
-make && make install
-make distclean
-```
-    
-    
-- libx265
-
-H.265/HEVC video encoder. See the
-[H.265 Encoding Guide](https://trac.ffmpeg.org/wiki/Encode/H.265) for more
-information and usage samples.
+- **libx265:** H.265/HEVC video encoder. See the
+[H.265 Encoding Guide](https://goo.gl/gByzia) for more information and usage
+samples.
  
-Requires `ffmpeg` to be configured with `--enable-gpl` `--enable-libx265`
+Requires `ffmpeg` to be configured with `--enable-gpl` and `--enable-libx265`
   
-```
-cd ~/ffmpeg_sources
-hg clone https://bitbucket.org/multicoreware/x265
-cd ~/ffmpeg_sources/x265/build/linux
-cmake -G "Unix Makefiles" -DCMAKE_INSTALL_PREFIX="$HOME/ffmpeg_build" -DENABLE_SHARED:bool=off ../../source
-make && make install
-```
+{% highlight bash %}
+$ cd ~/ffmpeg_sources
+$ hg clone https://bitbucket.org/multicoreware/x265
+$ cd ~/ffmpeg_sources/x265/build/linux
+$ cmake -G "Unix Makefiles" -DCMAKE_INSTALL_PREFIX="$HOME/ffmpeg_build" -DENABLE_SHARED:bool=off ../../source
+$ make && make install
+{% endhighlight %}
 
-- libfdk_aac
-
-AAC audio encoder.
+- **libfdk_aac:** AAC audio encoder.
 
 Requires `ffmpeg` to be configured with `--enable-libfdk-aac` (and
 `--enable-nonfree` if you also included `--enable-gpl`)
-  
-```
-cd ~/ffmpeg_sources
-git clone --depth 1 git://git.code.sf.net/p/opencore-amr/fdk-aac
-cd fdk-aac
-autoreconf -fiv
-./configure --prefix="$HOME/ffmpeg_build" --disable-shared
-make && make install
-make distclean
-```
 
-- libmp3lame
+{% highlight bash %}
+$ cd ~/ffmpeg_sources
+$ git clone --depth 1 git://git.code.sf.net/p/opencore-amr/fdk-aac
+$ cd fdk-aac
+$ autoreconf -fiv
+$ ./configure --prefix="$HOME/ffmpeg_build" --disable-shared
+$ make && make install
+$ make distclean
+{% endhighlight %}
 
-Mp3 audio encoder. Requires `ffmpeg` to be configured with
+
+- **libmp3lame:** Mp3 audio encoder. Requires `ffmpeg` to be configured with
 `--enable-libmp3lame`.
 
-```
-cd ~/ffmpeg_sources
-curl -L -O http://downloads.sourceforge.net/project/lame/lame/3.99/lame-3.99.5.tar.gz
-tar xzvf lame-3.99.5.tar.gz
-cd lame-3.99.5
-./configure --prefix="$HOME/ffmpeg_build" --bindir="$HOME/bin" --disable-shared --enable-nasm
-make && make install
-make distclean
-```
+{% highlight bash %}
+$ cd ~/ffmpeg_sources
+$ curl -L -O http://downloads.sourceforge.net/project/lame/lame/3.99/lame-3.99.5.tar.gz
+$ tar xzvf lame-3.99.5.tar.gz
+$ cd lame-3.99.5
+$ ./configure --prefix="$HOME/ffmpeg_build" --bindir="$HOME/bin" --disable-shared --enable-nasm
+$ make && make install
+$ make distclean
+{% endhighlight %}
+
+- **libopus:** Opus audio decoder and encoder. Requires `ffmpeg` to be
+configured with `--enable-libopus`.
 
 
-- libopus
-
-Opus audio decoder and encoder. Requires `ffmpeg` to be configured with
-`--enable-libopus`.
-
-```
-cd ~/ffmpeg_sources
-git clone http://git.opus-codec.org/opus.git
-cd opus
-autoreconf -fiv
-./configure --prefix="$HOME/ffmpeg_build" --disable-shared
-make && make install
-make distclean
-```
+{% highlight bash %}
+$ cd ~/ffmpeg_sources
+$ git clone http://git.opus-codec.org/opus.git
+$ cd opus
+$ autoreconf -fiv
+$ ./configure --prefix="$HOME/ffmpeg_build" --disable-shared
+$ make && make install
+$ make distclean
+{% endhighlight %}
 
 
-- libogg
+- **libogg:** Ogg bitstream library. Required by `libtheora` and `libvorbis`.
 
-Ogg bitstream library. Required by `libtheora` and `libvorbis`.
-
-```
-cd ~/ffmpeg_sources
-curl -O http://downloads.xiph.org/releases/ogg/libogg-1.3.2.tar.gz
-tar xzvf libogg-1.3.2.tar.gz
-cd libogg-1.3.2
-./configure --prefix="$HOME/ffmpeg_build" --disable-shared
-make && make install
-make distclean
-```
+{% highlight bash %}
+$ cd ~/ffmpeg_sources
+$ curl -O http://downloads.xiph.org/releases/ogg/libogg-1.3.2.tar.gz
+$ tar xzvf libogg-1.3.2.tar.gz
+$ cd libogg-1.3.2
+$ ./configure --prefix="$HOME/ffmpeg_build" --disable-shared
+$ make && make install
+$ make distclean
+{% endhighlight %}
 
 
-- libvorbis
+- **libvorbis:** Vorbis audio encoder. Requires libogg. Requires `ffmpeg` to
+be configured with `--enable-libvorbis`.
 
-Vorbis audio encoder. Requires libogg. Requires `ffmpeg` to be configured with
-`--enable-libvorbis`.
-
-```
-cd ~/ffmpeg_sources
-curl -O http://downloads.xiph.org/releases/vorbis/libvorbis-1.3.4.tar.gz
-tar xzvf libvorbis-1.3.4.tar.gz
-cd libvorbis-1.3.4
-LDFLAGS="-L$HOME/ffmeg_build/lib" CPPFLAGS="-I$HOME/ffmpeg_build/include" \
-./configure --prefix="$HOME/ffmpeg_build" --with-ogg="$HOME/ffmpeg_build" \
---disable-shared
-make && make install
-make distclean
-```
+{% highlight bash %}
+$ cd ~/ffmpeg_sources
+$ curl -O http://downloads.xiph.org/releases/vorbis/libvorbis-1.3.4.tar.gz
+$ tar xzvf libvorbis-1.3.4.tar.gz
+$ cd libvorbis-1.3.4
+$ LDFLAGS="-L$HOME/ffmeg_build/lib" CPPFLAGS="-I$HOME/ffmpeg_build/include" ./configure --prefix="$HOME/ffmpeg_build" --with-ogg="$HOME/ffmpeg_build" --disable-shared
+$ make && make install
+$ make distclean
+{% endhighlight %}
 
 
-- libvpx
-
-VP8/VP9 video encoder. Requires `ffmpeg` to be configured with
+- **libvpx:** VP8/VP9 video encoder. Requires `ffmpeg` to be configured with
 `--enable-libvpx`.
 
-```
-cd ~/ffmpeg_sources
-git clone --depth 1 https://chromium.googlesource.com/webm/libvpx.git
-cd libvpx
-./configure --prefix="$HOME/ffmpeg_build" --disable-examples
-make && make install
-make clean
-```
+{% highlight bash %}
+$ cd ~/ffmpeg_sources
+$ git clone --depth 1 https://chromium.googlesource.com/webm/libvpx.git
+$ cd libvpx
+$ ./configure --prefix="$HOME/ffmpeg_build" --disable-examples
+$ make && make install
+$ make clean
+{% endhighlight %}
 
 
-- FFmpeg
+- **FFmpeg**
 
-```
-cd ~/ffmpeg_sources
-git clone https://git.ffmpeg.org/ffmpeg.git ffmpeg
-cd ffmpeg
-PKG_CONFIG_PATH="$HOME/ffmpeg_build/lib/pkgconfig" ./configure \
+{% highlight bash %}
+$ cd ~/ffmpeg_sources
+$ git clone https://git.ffmpeg.org/ffmpeg.git ffmpeg
+$ cd ffmpeg
+$ PKG_CONFIG_PATH="$HOME/ffmpeg_build/lib/pkgconfig" ./configure \
 --prefix="$HOME/ffmpeg_build" --extra-cflags="-I$HOME/ffmpeg_build/include" \
 --extra-ldflags="-L$HOME/ffmpeg_build/lib" --bindir="$HOME/bin" \
 --pkg-config-flags="--static" --enable-gpl --enable-nonfree \
 --enable-libfdk-aac --enable-libfreetype --enable-libmp3lame --enable-libopus \
 --enable-libvorbis --enable-libvpx --enable-libx264 --enable-libx265
-make && make install
-make distclean
-hash -r
-```
+$ make && make install
+$ make distclean
+$ hash -r
+{% endhighlight %}
 
 
 Compilation is now complete and ffmpeg (also ffprobe, ffserver, lame and x264)
