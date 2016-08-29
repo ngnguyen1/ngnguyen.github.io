@@ -1,6 +1,7 @@
 ---
 layout: post
 title: "Compile FFmpeg on Centos"
+comments: true
 description: ""
 category: 
 tags: [centos,ffmpeg]

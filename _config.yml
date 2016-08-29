@@ -9,7 +9,7 @@ exclude: [".rvmrc",
 "changelog.md"]
 
 # Github is not supported pygments for currently.
-highlighter: pygments
+highlighter: rouge
 markdown: kramdown
 
 kramdown:
@@ -19,8 +19,8 @@ kramdown:
   entity_output: as_char
   toc_levels: 1..6
   smart_quotes: lsquo,rsquo,ldquo,rdquo
-  use_coderay: false
   hard_wrap: false
+  enable_coderay: false
   coderay:
     coderay_wrap: div
     coderay_line_numbers: table
