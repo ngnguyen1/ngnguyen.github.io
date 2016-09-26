@@ -7,3 +7,4 @@
 - [ ] Combined swiff and glance together
 - [ ] Try to use block storage (cinder) to storage openstack instances
   (default it will be save at compute node)
+- [ ] Reasearch about how to create openstack image manually
