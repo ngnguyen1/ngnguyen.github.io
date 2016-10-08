@@ -1,1 +1,21 @@
-/home/tspyimt/.bin/cat-which
+#!/bin/bash
+
+[ -f ~/.define-colors ] && source ~/.define-colors
+
+execs_="$@"
+
+
+if [ "$#" -eq 0 ]; then
+    echo -e "${style_codes[underline]}${style_codes[bold]}${fg_codes[green]}`basename $0`:${reset_codes[rsall]}"
+    cat `which $0`
+else
+    for exec in $execs_
+    do
+        if $(which "${exec}" >/dev/null); then
+            echo -e "${style_codes[underline]}${style_codes[bold]}${fg_codes[green]}$exec:${reset_codes[rsall]}"
+	        cat `which $exec`
+        else
+	        echo -e "${style_codes[underline]}${style_codes[bold]}${fg_codes[red]}\"${exec}\" is not found${reset_codes[rsall]}\n"
+        fi
+    done
+fi
