@@ -1,0 +1,96 @@
+#!/bin/bash
+# This script was written base on article "Bash tips: Colors and formatting
+# (ANSI/VT100 Control sequences)". 
+
+# We have only three ways to represent the same character.  And there will be
+# no differences between one representation or an other.  - \e is a convenient
+# way provided by Bash to insert the Escape character - \033 is the position
+# of the Escape character in the ASCII table expressed in octal (base 8) -
+# \x1b is the position of the Escape character in the ASCII table expressed in
+# hexadecimal (base 16) Can read more at: http://www.asciitable.com/
+SEQ=("\e[" "\033[" "\x1b[")
+
+
+##
+## Color 8/16
+##
+
+declare -A fg_codes=( 
+    ["black"]="${SEQ[0]}30m"
+    ["red"]="${SEQ[0]}31m"
+    ["green"]="${SEQ[0]}32m"
+    ["yellow"]="${SEQ[0]}33m"
+    ["blue"]="${SEQ[0]}34m"
+    ["magenta"]="${SEQ[0]}35m"
+    ["cyan"]="${SEQ[0]}36m"
+    ["lightgray"]="${SEQ[0]}37m"
+    ["default"]="${SEQ[0]}39m"
+    ["darkgray"]="${SEQ[0]}90m"
+    ["lightred"]="${SEQ[0]}91m"
+    ["lightgreen"]="${SEQ[0]}92m"
+    ["lightyellow"]="${SEQ[0]}93m"
+    ["lightblue"]="${SEQ[0]}94m"
+    ["lightmagenta"]="${SEQ[0]}95m"
+    ["lightcyan"]="${SEQ[0]}96m"
+    ["white"]="${SEQ[0]}97m"
+)
+
+declare -A bg_codes=(
+    ["black"]="${SEQ[0]}40m"
+    ["red"]="${SEQ[0]}41m"
+    ["green"]="${SEQ[0]}42m"
+    ["yellow"]="${SEQ[0]}43m"
+    ["blue"]="${SEQ[0]}44m"
+    ["magenta"]="${SEQ[0]}45m"
+    ["cyan"]="${SEQ[0]}46m"
+    ["lightgray"]="${SEQ[0]}47m"
+    ["default"]="${SEQ[0]}49m"
+    ["darkgray"]="${SEQ[0]}100m"
+    ["lightred"]="${SEQ[0]}101m"
+    ["lightgreen"]="${SEQ[0]}102m"
+    ["lightyellow"]="${SEQ[0]}103m"
+    ["lightblue"]="${SEQ[0]}104m"
+    ["lightmagenta"]="${SEQ[0]}105m"
+    ["lightcyan"]="${SEQ[0]}106m"
+    ["white"]="${SEQ[0]}107m"
+)
+
+declare -A style_codes=(
+    ["bold"]="${SEQ[0]}1m"
+    ["dim"]="${SEQ[0]}2m"
+    ["underline"]="${SEQ[0]}4m"
+    ["blink"]="${SEQ[0]}5m"
+    ["reverse"]="${SEQ[0]}7m"
+    ["hidden"]="${SEQ[0]}8m"
+)
+
+declare -A reset_codes=(
+    ["rsall"]="${SEQ[0]}0m"
+    ["rsbold"]="${SEQ[0]}21m"
+    ["rsdim"]="${SEQ[0]}22m"
+    ["rsunderline"]="${SEQ[0]}24m"
+    ["rsblink"]="${SEQ[0]}25m"
+    ["rsreverse"]="${SEQ[0]}27m"
+    ["rshidden"]="${SEQ[0]}28m"
+)
+
+# White On Black.
+WOB="${SEQ[0]}${fg_codes[white]}${bg_codes[black]}"
+# Black On Green.
+BOG="${SEQ[0]}${fg_codes[black]}${bg_codes[green]}"
+# Black On Yellow.
+BOY="${SEQ[0]}${fg_codes[black]}${bg_codes[yellow]}"
+# Black On red.
+BOR="${SEQ[0]}${fg_codes[black]}${bg_codes[red]}"
+# Green On Black.
+GOB="${SEQ[0]}${fg_codes[green]}${bg_codes[black]}"
+# Yellow On Black.
+YOB="${SEQ[0]}${fg_codes[yellow]}${bg_codes[black]}"
+# Red On Black.
+ROB="${SEQ[0]}${fg_codes[red]}${bg_codes[black]}"
+
+# echo -e "${BOG}Hello world ${reset_codes[rsall]}"
+
+## Examples:
+# echo -e "${style_codes[bold]} ❯❯❯❯ Hello fuck ${reset_codes[rsall]} ❯❯❯❯"
+# echo -e "${style_codes[blink]}hey you"
