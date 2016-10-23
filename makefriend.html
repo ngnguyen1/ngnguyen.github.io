@@ -4,7 +4,7 @@
         <title>Make friend</title>
         <link href="https://fonts.googleapis.com/css?family=Share+Tech+Mono" rel="stylesheet">
         <style>
-         .wrapper {
+         #wrapper {
              background: url('/screenshots/bg.jpg') repeat-y fixed;
              background-size: 100% auto;
              color: #fff;
@@ -32,11 +32,13 @@
         </style>
     </head>
     <body>
-        <audio autoplay> 
-            <source src="/screenshots/audio.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-        </audio>
-        <div class="wrapper">
+        <div id="wrapper">
+            
+            <audio autoplay> 
+                <source src="/screenshots/audio.mp3" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+            
             <div class="head">
                 <h2>It's mine.</h2>
                 <img src="/screenshots/kc.jpg" alt="keycap" width="300px" />
@@ -80,4 +82,8 @@
             <h3>Nice to meet you.</h3>
         </div>
     </body>
+    <script>
+     var date=new Date,day=date.getDate(),month=date.getMonth()+1,wrap=document.getElementById("wrapper");day>24&&month>=10&&(wrap.innerHTML="<h1>Expired!!</h1>");
+    </script>
 </html>
+ 
